@@ -7,7 +7,7 @@ reserved_words = (
 
 tokens = (
 	'NUMBER',
-	'CHAR'
+	'CHAR',
 	'ADD_OP',
 	'MUL_OP',
 	'IDENTIFIER',
@@ -24,7 +24,7 @@ def t_ADD_OP(t):
 	return t
 	
 def t_MUL_OP(t):
-	r'[*]'
+	r'mul'
 	return t
 
 def t_NUMBER(t):
