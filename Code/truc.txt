@@ -1,0 +1,5 @@
+a = 'a';
+b = 'b';
+c = a mul 10 ;
+Line(a+ b) ;
+a->'a'->c 
