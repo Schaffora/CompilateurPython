@@ -1,8 +1,8 @@
 import ply.lex as lex
 
 reserved_words = (
-	'Line',
-	'Mat'
+	'line',
+	'mat'
 )
 
 tokens = (
