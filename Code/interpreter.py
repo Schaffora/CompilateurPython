@@ -10,16 +10,16 @@ stack = []
 vars = {}
 
 dictionary = {
-    'a':[[0, 1, 1, 1, 0],
-               [1, 0, 0, 0, 1],
-               [1, 1, 1, 1, 1],
-               [1, 0, 0, 0, 1],
-               [1, 0, 0, 0, 1]],
-    'b':[[0, 1, 1, 1, 0],
-                [1, 1, 1, 1, 1],
-                [1, 1, 1, 1, 1],
-                [1, 0, 0, 0, 1],
-                [1, 0, 0, 0, 1]]
+    "'a'":[[0, 1, 1, 1, 0],
+         [1, 0, 0, 0, 1],
+         [1, 1, 1, 1, 1],
+         [1, 0, 0, 0, 1],
+         [1, 0, 0, 0, 1]],
+    "'b'":[[0, 1, 1, 1, 0],
+         [1, 1, 1, 1, 1],
+         [1, 1, 1, 1, 1],
+         [1, 0, 0, 0, 1],
+         [1, 0, 0, 0, 1]]
 }
 
 def valueOfToken(t) :
@@ -36,7 +36,6 @@ def execute(node) :
             pass
         elif node.__class__ == AST.TokenNode :
             stack.append(node.tok)
-            print(stack)
         elif node.__class__ == AST.LineNode :
             val = stack.pop()
             print (valueOfToken(val))
@@ -50,8 +49,8 @@ def execute(node) :
         elif node.__class__ == AST.AssignNode:
             val = valueOfToken(stack.pop())
             name = stack.pop()
-            # print(dictionary[name])
             vars[name] = dictionary[val]
+            # print(vars['a'])
         if node.next :
             node = node.next[0]
         else :
