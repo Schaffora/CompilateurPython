@@ -56,7 +56,7 @@ def execute(node) :
                 arg1 = 0
             stack.append(operations[node.op](arg1, arg2))
         elif node.__class__ == AST.AssignNode:
-            val = valueOfToken(stack.pop())
+            val = stack.pop()
             name = stack.pop()
             vars[name] = dictionary[val]
             # print(vars[name])
