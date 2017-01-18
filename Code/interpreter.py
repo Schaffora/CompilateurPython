@@ -1,10 +1,13 @@
 from array import array
 
 import AST
-
+from sympy import Matrix
+import numpy as np
 operations = {
-    '+' : lambda x,y : x+y,
-    'mul' : lambda x,y : x*y,
+    # '+' : lambda x,y : x+y,
+    # '+':  lambda x,y: list(map(print, x+y)),
+    '+':  lambda x,y: np.hstack((x, y)),
+    'mul' : lambda x,y :x*y,
 }
 stack = []
 vars = {}
@@ -15,12 +18,17 @@ dictionary = {
          [1, 1, 1, 1, 1],
          [1, 0, 0, 0, 1],
          [1, 0, 0, 0, 1]],
-    "'b'":[[0, 1, 1, 1, 0],
-         [1, 1, 1, 1, 1],
+    "'b'":[[1, 1, 1, 1, 0],
+         [1, 0, 0, 0, 1],
          [1, 1, 1, 1, 1],
          [1, 0, 0, 0, 1],
-         [1, 0, 0, 0, 1]]
+         [1, 1, 1, 1, 0]]
 }
+
+def add(x,y):
+    for i in range(0,5):
+        x[i]+y[i]
+
 
 def valueOfToken(t) :
     if isinstance(t,str) :
@@ -38,7 +46,8 @@ def execute(node) :
             stack.append(node.tok)
         elif node.__class__ == AST.LineNode :
             val = stack.pop()
-            print (valueOfToken(val))
+            for i in range(0,5):
+                print (valueOfToken(val)[i])
         elif node.__class__ == AST.OpNode:
             arg2 = valueOfToken(stack.pop())
             if node.nbargs == 2:
@@ -50,7 +59,7 @@ def execute(node) :
             val = valueOfToken(stack.pop())
             name = stack.pop()
             vars[name] = dictionary[val]
-            # print(vars['a'])
+            # print(vars[name])
         if node.next :
             node = node.next[0]
         else :
