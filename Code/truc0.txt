@@ -1,21 +1,4 @@
-x = 'a'+'b';
-y = 'e';
-line x+y;
-
-h= x mul 3;
-line h;
-
-z= x+y;
-line z + 'a';
-line z mul 2;
-
-line (x + 'b') mul 2;
-
-j= 'c'+'a'+'c'+'a';
-line j;
-line ('c'+'a') mul 2;
-
 if (3 < 5)
 {
-line x;
+    line 'a'
 }

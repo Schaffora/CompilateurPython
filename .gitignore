@@ -1,5 +1,5 @@
 .idea
 __pycache__
-Code/generated
+Code/generated/*
 Code/pydot-1.0.3/__pycache__
 Code/pyparsing-1.5.5/__pycache__
