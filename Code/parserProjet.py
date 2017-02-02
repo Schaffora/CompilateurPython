@@ -52,6 +52,10 @@ def p_expression_less(p):
     ''' expression : expression '<' expression '''
     p[0] = AST.LessNode([p[1], p[3]])
 
+def p_expression_more(p):
+    ''' expression : expression '>' expression '''
+    p[0] = AST.MoreNode([p[1], p[3]])
+
 def p_expression_char(p):
     '''expression : CHAR'''
     p[0] = AST.TokenNode(p[1])
@@ -72,6 +76,7 @@ precedence = (
     ('left', 'ADD_OP'),
     ('left', 'MUL_OP'),
     ('right', '<'),
+    ('right', '>'),
 )
 
 def parse(program):

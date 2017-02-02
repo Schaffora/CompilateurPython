@@ -138,7 +138,10 @@ class WhileNode(Node):
 
 class LessNode(Node):
     type = '<'
-    
+
+class MoreNode(Node):
+    type = '>'
+
 class EntryNode(Node):
     type = 'ENTRY'
     def __init__(self):

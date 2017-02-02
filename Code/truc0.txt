@@ -1,4 +1,4 @@
-if (3 < 5)
-{
-    line 'a'
+if (30 > 5){
+    line 'a';
+    line 'b'
 }

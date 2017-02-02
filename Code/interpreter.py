@@ -36,6 +36,25 @@ def execute(node) :
         elif node.__class__== AST.SizeNode:
             val = stack.pop()
             print(size(val))
+        elif node.__class__ == AST.LessNode:
+            arg1 = valueOfToken(stack.pop())
+            arg2 = valueOfToken(stack.pop())
+            if (arg2 < arg1):
+                stack.append(1)
+            else:
+                stack.append(0)
+        elif node.__class__ == AST.MoreNode:
+            arg1 = valueOfToken(stack.pop())
+            arg2 = valueOfToken(stack.pop())
+            if (arg2 > arg1):
+                stack.append(1)
+            else:
+                stack.append(0)
+        elif node.__class__ == AST.IfNode:
+            cond = valueOfToken(stack.pop())
+            if(cond==1):
+                node = node.next[0]
+            continue
         elif node.__class__ == AST.OpNode:
             arg2 = valueOfToken(stack.pop())
             if node.nbargs == 2:

@@ -15,6 +15,6 @@ j= 'c'+'a'+'c'+'a';
 line j;
 line ('c'+'a') mul 2;
 
-if (5 < 3) {
+if (50 < 30) {
     line x + 'c'
 }
