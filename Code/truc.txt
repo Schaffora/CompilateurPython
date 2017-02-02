@@ -6,4 +6,4 @@ line x+y;
 line z + 'a';
 line h;
 line z mul 2;
-line x + 'b' mul 2
+line (x + 'b') mul 2

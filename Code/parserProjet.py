@@ -35,6 +35,10 @@ def p_expression_mat(p):
     '''expression : MAT'''
     p[0] = AST.TokenNode(p[1])
 
+def p_expression_paren(p):
+    '''expression : '(' expression ')' '''
+    p[0] = p[2]
+
 def p_expression_char(p):
     '''expression : CHAR'''
     p[0] = AST.TokenNode(p[1])
