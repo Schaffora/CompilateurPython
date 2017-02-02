@@ -19,7 +19,7 @@ def p_programme_recursive(p):
 
 def p_statement(p):
     ''' statement : assignation
-            | structure'''
+            | structure '''
     p[0] = p[1]
 
 def p_statement_line(p):
@@ -48,6 +48,10 @@ def p_expression_paren(p):
     '''expression : '(' expression ')' '''
     p[0] = p[2]
 
+def p_expression_less(p):
+    ''' expression : expression '<' expression '''
+    p[0] = AST.LessNode([p[1], p[3]])
+
 def p_expression_char(p):
     '''expression : CHAR'''
     p[0] = AST.TokenNode(p[1])
@@ -67,6 +71,7 @@ def p_error(p):
 precedence = (
     ('left', 'ADD_OP'),
     ('left', 'MUL_OP'),
+    ('right', '<'),
 )
 
 def parse(program):

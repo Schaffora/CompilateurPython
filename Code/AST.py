@@ -135,6 +135,9 @@ class PrintNode(Node):
 
 class WhileNode(Node):
     type = 'while'
+
+class LessNode(Node):
+    type = '<'
     
 class EntryNode(Node):
     type = 'ENTRY'
