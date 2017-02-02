@@ -1,3 +1,9 @@
 x = 'a';
 y = 'b';
-line x+y
+z= x+y;
+h= x mul 3;
+line x+y;
+line z + 'a';
+line h;
+line z mul 2
+line x + 'b' mul 2

@@ -1,9 +1,9 @@
 # coding: latin-1
 
-''' Petit module utilitaire pour la construction, la manipulation et la 
+''' Petit module utilitaire pour la construction, la manipulation et la
 représentation d'arbres syntaxiques abstraits.
 
-Sûrement plein de bugs et autres surprises. À prendre comme un 
+Sûrement plein de bugs et autres surprises. À prendre comme un
 "work in progress"...
 Notamment, l'utilisation de pydot pour représenter un arbre syntaxique cousu
 est une utilisation un peu "limite" de graphviz. Ça marche, mais le layout n'est
