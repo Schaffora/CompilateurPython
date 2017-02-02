@@ -9,17 +9,26 @@ def p_programme_statement(p):
     ''' programme : statement '''
     p[0] = AST.ProgramNode(p[1])
 
+def p_structure_if(p):
+    ''' structure : IF expression '{' programme '}' '''
+    p[0] = AST.IfNode([p[2],p[4]])
+
 def p_programme_recursive(p):
     ''' programme : statement ';' programme '''
     p[0] = AST.ProgramNode([p[1]]+p[3].children)
 
 def p_statement(p):
-    ''' statement : assignation'''
+    ''' statement : assignation
+            | structure'''
     p[0] = p[1]
 
 def p_statement_line(p):
     ''' statement : LINE expression '''
     p[0] = AST.LineNode(p[2])
+
+def p_statement_size(p):
+    ''' statement : SIZE expression '''
+    p[0] = AST.SizeNode(p[2])
 
 def p_expression_op(p):
     '''expression : expression ADD_OP expression

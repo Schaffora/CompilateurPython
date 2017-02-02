@@ -33,6 +33,9 @@ def execute(node) :
             for i in range(0,5):
                 print ("".join(valueOfToken(val)[i]))
             print()
+        elif node.__class__== AST.SizeNode:
+            val = stack.pop()
+            print(size(val))
         elif node.__class__ == AST.OpNode:
             arg2 = valueOfToken(stack.pop())
             if node.nbargs == 2:
@@ -48,6 +51,10 @@ def execute(node) :
             node = node.next[0]
         else :
             node = None
+
+def size(node):
+    sizeValue = np.shape(valueOfToken(node))
+    return sizeValue
 
 if __name__ ==  "__main__" :
     from parserProjet import parse

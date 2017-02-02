@@ -124,6 +124,12 @@ class AssignNode(Node):
 class LineNode(Node):
     type = 'line'
 
+class IfNode(Node):
+    type = 'if'
+
+class SizeNode(Node):
+    type = 'size'
+
 class PrintNode(Node):
     type = 'print'
 

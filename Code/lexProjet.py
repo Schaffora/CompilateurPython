@@ -2,6 +2,8 @@ import ply.lex as lex
 
 reserved_words = (
 	'line',
+	'size',
+	'if',
 	'mat'
 )
 
@@ -13,7 +15,7 @@ tokens = (
 	'IDENTIFIER',
 ) + tuple(map(lambda s:s.upper(),reserved_words))
 
-literals = '();={}'
+literals = '();={}<>'
 
 def t_CHAR(t):
 	r'\'([A-Za-z_]){1}\''
