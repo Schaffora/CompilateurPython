@@ -1,5 +1,5 @@
-x = 'a';
-y = 'b';
+x = 'a'+'b';
+y = 'c';
 z= x+y;
 h= x mul 3;
 line x+y;
