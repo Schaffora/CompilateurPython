@@ -133,6 +133,9 @@ class SizeNode(Node):
 class DelNode(Node):
     type = 'del'
 
+class RepNode(Node):
+    type = 'rep'
+
 class PrintNode(Node):
     type = 'print'
 

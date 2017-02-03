@@ -20,7 +20,7 @@ def execute(self) :
     if isinstance(self.tok,str) :
         try :
             if self.tok[0]=="'":
-                vars[self.tok]=self.tok
+                vars[self.tok]=[self.tok]
                 return vars[self.tok]
             else:
                 return vars[self.tok]
@@ -44,6 +44,16 @@ def execute(self):
             a=i
     if a is not -1:
         vars[self.children[0].tok]=np.delete(vars[self.children[0].tok],a)
+
+@addToClass(AST.RepNode)
+def execute(self):
+    a=-1
+    for i in range(0,len(vars[self.children[0].tok[0]])):
+        if str(vars[self.children[0].tok][i]) == str(self.children[1]).replace("\"", "").replace("\n",""):
+            a=i
+    if a is not -1:
+        vars[self.children[0].tok] = np.delete(vars[self.children[0].tok], a)
+        vars[self.children[0].tok] = np.insert(vars[self.children[0].tok],a,str(self.children[2]).replace("\"", "").replace("\n",""))
 
 @addToClass(AST.OpNode)
 def execute(self) :

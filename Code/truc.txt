@@ -1,5 +1,5 @@
 x = 'a'+'a'+'b';
-y = 'e';
+y = 'a'+'b';
 line x+y;
 
 h= x mul 3;
@@ -32,4 +32,7 @@ for(bla=0; bla<3;1)
     x del 'a'
 };
 
+line x;
+
+x rep 'b';'e';
 line x

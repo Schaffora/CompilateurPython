@@ -17,6 +17,10 @@ def p_statement_del(p):
     '''statement : expression DEL expression '''
     p[0] = AST.DelNode([p[1],p[3]])
 
+def p_statement_rep(p):
+    '''statement : expression REP expression ';' expression '''
+    p[0] = AST.RepNode([p[1],p[3],p[5]])
+
 def p_statement(p):
     ''' statement : assignation
             | structure '''
@@ -80,6 +84,7 @@ precedence = (
     ('left', 'ADD_OP'),
     ('left', 'MUL_OP'),
     ('left', 'DEL'),
+    ('left', 'REP'),
     ('right', '<'),
     ('right', '>'),
 )
