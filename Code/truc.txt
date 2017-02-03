@@ -33,6 +33,7 @@ for(bla=0; bla<3;1)
 };
 
 line x;
-
 x rep 'b';'e';
+x rep 'e';'j';
+x rep 'a';'j';
 line x
