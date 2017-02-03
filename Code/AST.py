@@ -130,6 +130,9 @@ class IfNode(Node):
 class SizeNode(Node):
     type = 'size'
 
+class DelNode(Node):
+    type = 'del'
+
 class PrintNode(Node):
     type = 'print'
 

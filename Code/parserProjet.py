@@ -41,7 +41,7 @@ def p_expression_op(p):
 
 def p_expression_num_or_var(p):
     '''expression : NUMBER
-        | IDENTIFIER '''
+        | IDENTIFIER'''
     p[0] = AST.TokenNode(p[1])
 
 def p_expression_mat(p):
@@ -64,6 +64,10 @@ def p_expression_char(p):
     '''expression : CHAR'''
     p[0] = AST.TokenNode(p[1])
 
+def p_statement_del(p):
+    '''statement : expression DEL expression '''
+    p[0] = AST.DelNode(p[1])
+
 def p_assign(p):
     ''' assignation : IDENTIFIER '=' expression '''
     p[0] = AST.AssignNode([AST.TokenNode(p[1]),p[3]])
@@ -79,6 +83,7 @@ def p_error(p):
 precedence = (
     ('left', 'ADD_OP'),
     ('left', 'MUL_OP'),
+    ('left', 'DEL'),
     ('right', '<'),
     ('right', '>'),
 )

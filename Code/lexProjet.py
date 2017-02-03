@@ -5,7 +5,8 @@ reserved_words = (
 	'size',
 	'if',
 	'for',
-	'mat'
+	'mat',
+	'del'
 )
 
 tokens = (

@@ -20,7 +20,8 @@ def execute(self) :
     if isinstance(self.tok,str) :
         try :
             if self.tok[0]=="'":
-                return dictionary[self.tok]
+                vars[self.tok]=self.tok
+                return vars[self.tok]
             else:
                 return vars[self.tok]
         except KeyError :
@@ -53,7 +54,10 @@ def execute(self) :
 
 @addToClass(AST.LineNode)
 def execute(self) :
-    print ("\n".join("".join(map(str, line)) for line in self.children[0].execute()))
+    for i in range(0, 5):
+        for mot in self.children[0].execute():
+            print("".join(dictionary[mot][i]),end="")
+        print()
     print()
 
 @addToClass(AST.LessNode)

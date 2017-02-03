@@ -23,6 +23,6 @@ for(abc=0; abc<2;1)
 {
     for(def=0; def<2;1)
     {
-        line 'd'
+        line 'd'+'c'
     }
 }
