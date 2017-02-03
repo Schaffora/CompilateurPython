@@ -8,6 +8,26 @@ def thread(self, lastNode):
     lastNode.addNext(self)
     return self
 
+@addToClass(AST.WhileNode)
+def thread(self, lastNode):
+    beforeCond = lastNode
+    exitCond = self.children[0].thread(lastNode)
+    exitCond.addNext(self)
+    exitBody = self.children[1].thread(self)
+    exitBody.addNext(beforeCond.next[-1])
+    return self
+
+@addToClass(AST.IfNode)
+def thread(self, lastNode):
+    print(lastNode)
+    beforeCond = lastNode
+    exitCond = self.children[0].thread(lastNode)
+    print(self.children[0])
+    exitCond.addNext(self)
+    exitBody = self.children[1].thread(self)
+    #exitBody.addNext(beforeCond.next[-1])
+    return self
+
 def thread(tree):
     entry = AST.EntryNode()
     tree.thread(entry)

@@ -52,7 +52,9 @@ def execute(node) :
                 stack.append(0)
         elif node.__class__ == AST.IfNode:
             cond = valueOfToken(stack.pop())
-            if(cond==1):
+            if(cond!=0):
+                node = node.next[1]
+            else:
                 node = node.next[0]
             continue
         elif node.__class__ == AST.OpNode:
