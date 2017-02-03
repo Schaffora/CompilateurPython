@@ -1,4 +1,4 @@
-x = 'a'+'b';
+x = 'a'+'a'+'b';
 y = 'e';
 line x+y;
 
@@ -25,4 +25,11 @@ for(abc=0; abc<2;1)
     {
         line 'd'+'c'
     }
-}
+};
+
+for(bla=0; bla<3;1)
+{
+    x del 'a'
+};
+
+line x

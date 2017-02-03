@@ -36,6 +36,15 @@ def execute(self) :
         self.children[2].execute()
         vars[self.children[0].children[0].tok]+= self.children[2].execute()
 
+@addToClass(AST.DelNode)
+def execute(self):
+    a=-1
+    for i in range(0,len(vars[self.children[0].tok[0]])):
+        if str(vars[self.children[0].tok][i]) == str(self.children[1]).replace("\"", "").replace("\n",""):
+            a=i
+    if a is not -1:
+        vars[self.children[0].tok]=np.delete(vars[self.children[0].tok],a)
+
 @addToClass(AST.OpNode)
 def execute(self) :
     args = [c.execute() for c in self.children]

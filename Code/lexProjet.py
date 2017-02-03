@@ -5,7 +5,6 @@ reserved_words = (
 	'size',
 	'if',
 	'for',
-	'mat',
 	'del'
 )
 
