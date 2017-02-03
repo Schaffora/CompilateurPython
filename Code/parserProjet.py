@@ -34,7 +34,7 @@ def p_expression_op(p):
     '''expression : expression ADD_OP expression
             | expression MUL_OP expression'''
     p[0] = AST.OpNode(p[2], [p[1], p[3]])
-    	
+
 def p_expression_num_or_var(p):
     '''expression : NUMBER
         | IDENTIFIER '''
@@ -85,17 +85,17 @@ def parse(program):
 yacc.yacc(outputdir='generated')
 
 if __name__ == "__main__":
-    import sys 
-    	
+    import sys
+
     prog = open(sys.argv[1]).read()
     result = yacc.parse(prog)
     if result:
         print (result)
-            
+
         import os
         graph = result.makegraphicaltree()
         name = os.path.splitext(sys.argv[1])[0]+'-ast.pdf'
-        graph.write_pdf(name) 
+        graph.write_pdf(name)
         print ("wrote ast to", name)
     else:
         print ("Parsing returned no result!")

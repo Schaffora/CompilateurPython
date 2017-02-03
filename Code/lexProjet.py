@@ -8,23 +8,23 @@ reserved_words = (
 )
 
 tokens = (
-	'NUMBER',
-	'CHAR',
-	'ADD_OP',
-	'MUL_OP',
-	'IDENTIFIER',
-) + tuple(map(lambda s:s.upper(),reserved_words))
+			 'NUMBER',
+			 'CHAR',
+			 'ADD_OP',
+			 'MUL_OP',
+			 'IDENTIFIER',
+		 ) + tuple(map(lambda s:s.upper(),reserved_words))
 
 literals = '();={}<>'
 
 def t_CHAR(t):
 	r'\'([A-Za-z_]){1}\''
 	return t
-	
+
 def t_ADD_OP(t):
 	r'[+]'
 	return t
-	
+
 def t_MUL_OP(t):
 	r'mul'
 	return t
@@ -39,7 +39,7 @@ def t_IDENTIFIER(t):
 	if t.value in reserved_words:
 		t.type = t.value.upper()
 	return t
-	
+
 def t_newline(t):
 	r'\n+'
 	t.lexer.lineno += len(t.value)

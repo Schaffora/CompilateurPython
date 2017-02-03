@@ -50,31 +50,27 @@ def execute(self) :
 
 @addToClass(AST.LineNode)
 def execute(self) :
-    #print(self.children[0].execute())
-    #print(np.array_str(self.children[0].execute()))
-    print ("\n".join(" ".join(map(str, line)) for line in self.children[0].execute()))
-    #print(''.join(self.children[0].execute()))
+    print ("\n".join("".join(map(str, line)) for line in self.children[0].execute()))
     print()
 
 @addToClass(AST.LessNode)
-def compile(self):
-    if (self.children[0].compile() < self.children[1].compile()):
+def execute(self):
+    if (self.children[0].execute() < self.children[1].execute()):
         return 1
     else:
         return 0
 
 @addToClass(AST.MoreNode)
-def compile(self):
-    if (self.children[0].compile() > self.children[1].compile()):
+def execute(self):
+    if (self.children[0].execute() > self.children[1].execute()):
         return 1
     else:
         return 0
 
 @addToClass(AST.IfNode)
-def compile(self):
-    self.children[0].compile()
-    return 1
-
+def execute(self):
+    if (self.children[0].execute() != 0):
+        return str(self.children[1].execute())
 
 def size(node):
     #sizeValue = np.shape(valueOfToken(node))
