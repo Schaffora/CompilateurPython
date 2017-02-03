@@ -31,7 +31,7 @@ def t_MUL_OP(t):
 	return t
 
 def t_NUMBER(t):
-	r'\d+'
+	r'-*\d+'
 	t.value = int(t.value)
 	return t
 

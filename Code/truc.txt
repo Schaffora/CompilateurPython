@@ -19,7 +19,10 @@ if (500 < 300){
     line x
 };
 
-for(abc=0; abc<5;1)
+for(abc=0; abc<2;1)
 {
-    line 'd'
+    for(def=0; def<2;1)
+    {
+        line 'd'
+    }
 }

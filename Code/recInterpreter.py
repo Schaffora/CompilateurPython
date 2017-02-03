@@ -32,12 +32,8 @@ def execute(self) :
     self.children[0].execute()
     while (self.children[1].execute() == 1):
         self.children[3].execute()
-        #self.children[2].execute()
-        #print(self.children[0].tok)
-        print(vars)
-        vars[self.children[0]]+=self.children[2].execute()
-        #self.children[0]
-
+        self.children[2].execute()
+        vars[self.children[0].children[0].tok]+= self.children[2].execute()
 
 @addToClass(AST.OpNode)
 def execute(self) :
