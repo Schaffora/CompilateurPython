@@ -25,11 +25,6 @@ def execute(self) :
                 return vars[self.tok]
         except KeyError :
             print("Error : variable %s undefined!" % self.tok)
-    # if isinstance(self.tok,np.ndarray):
-    #     try:
-    #         return dictionary[self.tok]
-    #     except KeyError:
-    #         print("Error : variable %s undefined!" % self.tok)
     return self.tok
 
 @addToClass(AST.OpNode)
@@ -72,14 +67,14 @@ def execute(self):
     if (self.children[0].execute() != 0):
         return str(self.children[1].execute())
 
-def size(node):
-    #sizeValue = np.shape(valueOfToken(node))
-    return 1
+@addToClass(AST.SizeNode)
+def execute(self):
+    sizeValue=np.shape(self.children[0].execute())
+    return sizeValue
 
 if __name__ == "__main__" :
     from parserProjet import parse
     import sys
     prog = open(sys.argv[1]).read()
     ast = parse(prog)
-    #print(ast)
     ast.execute()
