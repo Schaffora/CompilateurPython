@@ -13,6 +13,10 @@ def p_structure_if(p):
     ''' structure : IF expression '{' programme '}' '''
     p[0] = AST.IfNode([p[2],p[4]])
 
+def p_structure_for(p):
+    ''' structure : FOR '(' assignation ';' expression ';' expression ')'  '{' programme '}' '''
+    p[0] = AST.ForNode([p[3],p[5],p[7],p[10]])
+
 def p_programme_recursive(p):
     ''' programme : statement ';' programme '''
     p[0] = AST.ProgramNode([p[1]]+p[3].children)

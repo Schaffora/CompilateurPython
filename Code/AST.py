@@ -136,6 +136,9 @@ class PrintNode(Node):
 class WhileNode(Node):
     type = 'while'
 
+class ForNode(Node):
+    type = 'for'
+
 class LessNode(Node):
     type = '<'
 

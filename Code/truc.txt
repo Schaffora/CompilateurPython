@@ -17,4 +17,9 @@ line ('c'+'a') mul 2;
 
 if (500 < 300){
     line x
+};
+
+for(abc=0; abc<5;1)
+{
+    line 'd'
 }

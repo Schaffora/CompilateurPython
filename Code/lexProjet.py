@@ -4,6 +4,7 @@ reserved_words = (
 	'line',
 	'size',
 	'if',
+	'for',
 	'mat'
 )
 
