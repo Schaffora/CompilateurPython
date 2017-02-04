@@ -1,3 +1,8 @@
+''' Created by Damien Gygi and Raphaël Schaffo
+    04.02.2017
+    HE-ARC
+'''
+
 import ply.lex as lex
 
 reserved_words = (

@@ -1,3 +1,4 @@
+# Dictionnaire de matrice avec comme clé le cractère et comme valeur la matrice correspondant
 dictionary = {
     "'a'":[['░', '█', '█', '█','░','░'],
          ['█', '░', '░', '░', '█','░'],

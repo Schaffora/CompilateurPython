@@ -1,3 +1,8 @@
+''' Adapted by Damien Gygi and Raphaël Schaffo
+    04.02.2017
+    HE-ARC
+'''
+
 # coding: latin-1
 
 ''' Petit module utilitaire pour la construction, la manipulation et la
@@ -93,10 +98,12 @@ class Node:
                     edge.set_labelfontcolor(color)
                 graph.add_edge(edge)
             return graph    
-        
+
+# Node du programme
 class ProgramNode(Node):
     type = 'Program'
-        
+
+# Node pour les tokens
 class TokenNode(Node):
     type = 'token'
     def __init__(self, tok):
@@ -105,7 +112,8 @@ class TokenNode(Node):
         
     def __repr__(self):
         return repr(self.tok)
-    
+
+# Node pour les opérations
 class OpNode(Node):
     def __init__(self, op, children):
         Node.__init__(self,children)
@@ -117,40 +125,44 @@ class OpNode(Node):
         
     def __repr__(self):
         return "%s (%s)" % (self.op, self.nbargs)
-    
+
+# Node pour l'assignation
 class AssignNode(Node):
     type = '='
 
+# Node pour l'affichage
 class LineNode(Node):
     type = 'line'
 
+# Node pour la condition
 class IfNode(Node):
     type = 'if'
 
+# Node pour la taille
 class SizeNode(Node):
     type = 'size'
 
+# Node pour la suppresion
 class DelNode(Node):
     type = 'del'
 
+# Node pour le remplacement
 class RepNode(Node):
     type = 'rep'
 
-class PrintNode(Node):
-    type = 'print'
-
-class WhileNode(Node):
-    type = 'while'
-
+# Node pour la boucle
 class ForNode(Node):
     type = 'for'
 
+# Node pour plus petit que
 class LessNode(Node):
     type = '<'
 
+# Node pour plus grand que
 class MoreNode(Node):
     type = '>'
 
+# Node d'entrée
 class EntryNode(Node):
     type = 'ENTRY'
     def __init__(self):

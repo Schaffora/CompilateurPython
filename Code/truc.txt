@@ -11,17 +11,17 @@ line z mul 2;
 
 line (x + 'b') mul 2;
 
-j= 'c'+'a'+'c'+'a';
+j= 'c'+'b'+'c'+'a';
 line j;
-line ('c'+'a') mul 2;
+line ('c'+'b') mul 2;
 
 if (500 < 300){
     line x
 };
 
-for(abc=0; abc<2;1)
+for(abc=2; abc<2;1)
 {
-    for(def=0; def<2;1)
+    for(def=2; def<2;1)
     {
         line 'd'+'c'
     }
@@ -35,5 +35,6 @@ for(bla=0; bla<3;1)
 line x;
 x rep 'b';'e';
 x rep 'e';'j';
-x rep 'a';'j';
+x rep 'j';'a';
+x=x+'j';
 line x

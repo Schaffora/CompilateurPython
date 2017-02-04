@@ -7,7 +7,7 @@ _lr_method = 'LALR'
 
 _lr_signature = 'E71AFE16293C9410A5E157FAB8B43651'
     
-_lr_action_items = {'MUL_OP':([5,11,12,13,14,15,16,17,25,30,31,32,33,34,35,36,39,44,45,47,],[19,-16,-11,-12,19,-12,19,19,19,-10,-14,19,19,-15,19,-13,19,19,19,19,]),'}':([4,7,8,11,12,14,15,17,29,30,31,33,34,35,36,39,40,43,44,50,51,],[-1,-5,-6,-16,-11,-8,-12,-7,-2,-10,-14,-3,-15,-9,-13,-17,43,-18,-4,51,-19,]),'{':([11,12,15,16,30,31,34,35,36,48,],[-16,-11,-12,28,-10,-14,-15,-9,-13,49,]),'SIZE':([0,18,28,49,],[1,1,1,1,]),'FOR':([0,18,28,49,],[9,9,9,9,]),'IF':([0,18,28,49,],[2,2,2,2,]),'=':([13,38,],[27,27,]),'$end':([4,7,8,10,11,12,14,15,17,29,30,31,33,34,35,36,39,43,44,51,],[-1,-5,-6,0,-16,-11,-8,-12,-7,-2,-10,-14,-3,-15,-9,-13,-17,-18,-4,-19,]),'LINE':([0,18,28,49,],[3,3,3,3,]),'CHAR':([0,1,2,3,6,18,19,20,21,22,23,24,27,28,41,42,46,49,],[11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,11,]),'<':([5,11,12,13,14,15,16,17,25,30,31,32,33,34,35,36,39,44,45,47,],[20,-16,-11,-12,20,-12,20,20,20,20,20,20,20,-15,20,-13,20,20,20,20,]),')':([11,12,15,25,30,31,34,35,36,47,],[-16,-11,-12,36,-10,-14,-15,-9,-13,48,]),'REP':([5,11,12,13,15,30,31,34,35,36,],[21,-16,-11,-12,-12,-10,-14,-15,-9,-13,]),'NUMBER':([0,1,2,3,6,18,19,20,21,22,23,24,27,28,41,42,46,49,],[12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,12,]),'ADD_OP':([5,11,12,13,14,15,16,17,25,30,31,32,33,34,35,36,39,44,45,47,],[24,-16,-11,-12,24,-12,24,24,24,-10,-14,24,24,-15,-9,-13,24,24,24,24,]),';':([4,7,8,11,12,14,15,17,30,31,32,33,34,35,36,37,39,43,44,45,51,],[18,-5,-6,-16,-11,-8,-12,-7,-10,-14,41,-3,-15,-9,-13,42,-17,-18,-4,46,-19,]),'(':([0,1,2,3,6,9,18,19,20,21,22,23,24,27,28,41,42,46,49,],[6,6,6,6,6,26,6,6,6,6,6,6,6,6,6,6,6,6,6,]),'DEL':([5,11,12,13,15,30,31,34,35,36,],[22,-16,-11,-12,-12,-10,-14,-15,-9,-13,]),'>':([5,11,12,13,14,15,16,17,25,30,31,32,33,34,35,36,39,44,45,47,],[23,-16,-11,-12,23,-12,23,23,23,23,23,23,23,23,23,-13,23,23,23,23,]),'IDENTIFIER':([0,1,2,3,6,18,19,20,21,22,23,24,26,27,28,41,42,46,49,],[13,15,15,15,15,13,15,15,15,15,15,15,38,15,13,15,15,15,13,]),}
+_lr_action_items = {'IF':([0,17,31,49,],[4,4,4,4,]),'NUMBER':([0,1,4,6,12,17,20,21,22,23,24,25,27,31,40,42,46,49,],[5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,]),'(':([0,1,2,4,6,12,17,20,21,22,23,24,25,27,31,40,42,46,49,],[6,6,16,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,]),'>':([5,8,10,13,14,15,18,19,26,32,33,34,35,36,37,38,39,43,45,47,],[-11,21,-16,-12,21,-12,21,21,21,-13,21,21,21,21,21,21,21,21,21,21,]),'{':([5,10,15,18,32,33,34,37,38,48,],[-11,-16,-12,31,-13,-10,-15,-14,-9,49,]),'REP':([5,8,10,13,15,32,33,34,37,38,],[-11,22,-16,-12,-12,-13,-10,-15,-14,-9,]),'<':([5,8,10,13,14,15,18,19,26,32,33,34,35,36,37,38,39,43,45,47,],[-11,24,-16,-12,24,-12,24,24,24,-13,24,-15,24,24,24,24,24,24,24,24,]),'DEL':([5,8,10,13,15,32,33,34,37,38,],[-11,23,-16,-12,-12,-13,-10,-15,-14,-9,]),'CHAR':([0,1,4,6,12,17,20,21,22,23,24,25,27,31,40,42,46,49,],[10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,10,]),';':([3,5,7,10,11,14,15,26,28,32,33,34,35,36,37,38,39,43,44,45,51,],[17,-11,-5,-16,-6,-8,-12,-7,40,-13,-10,-15,42,-3,-14,-9,-17,46,-18,-4,-19,]),'ADD_OP':([5,8,10,13,14,15,18,19,26,32,33,34,35,36,37,38,39,43,45,47,],[-11,25,-16,-12,25,-12,25,25,25,-13,-10,-15,25,25,-14,-9,25,25,25,25,]),'MUL_OP':([5,8,10,13,14,15,18,19,26,32,33,34,35,36,37,38,39,43,45,47,],[-11,20,-16,-12,20,-12,20,20,20,-13,-10,-15,20,20,-14,20,20,20,20,20,]),'LINE':([0,17,31,49,],[12,12,12,12,]),'SIZE':([0,17,31,49,],[1,1,1,1,]),')':([5,10,15,19,32,33,34,37,38,47,],[-11,-16,-12,32,-13,-10,-15,-14,-9,48,]),'=':([13,29,],[27,27,]),'FOR':([0,17,31,49,],[2,2,2,2,]),'IDENTIFIER':([0,1,4,6,12,16,17,20,21,22,23,24,25,27,31,40,42,46,49,],[13,15,15,15,15,29,13,15,15,15,15,15,15,15,13,15,15,15,13,]),'$end':([3,5,7,9,10,11,14,15,26,30,32,33,34,36,37,38,39,44,45,51,],[-1,-11,-5,0,-16,-6,-8,-12,-7,-2,-13,-10,-15,-3,-14,-9,-17,-18,-4,-19,]),'}':([3,5,7,10,11,14,15,26,30,32,33,34,36,37,38,39,41,44,45,50,51,],[-1,-11,-5,-16,-6,-8,-12,-7,-2,-13,-10,-15,-3,-14,-9,-17,44,-18,-4,51,-19,]),}
 
 _lr_action = {}
 for _k, _v in _lr_action_items.items():
@@ -16,7 +16,7 @@ for _k, _v in _lr_action_items.items():
       _lr_action[_x][_k] = _y
 del _lr_action_items
 
-_lr_goto_items = {'programme':([0,18,28,49,],[10,29,40,50,]),'expression':([0,1,2,3,6,18,19,20,21,22,23,24,27,28,41,42,46,49,],[5,14,16,17,25,5,30,31,32,33,34,35,39,5,44,45,47,5,]),'statement':([0,18,28,49,],[4,4,4,4,]),'assignation':([0,18,26,28,49,],[7,7,37,7,7,]),'structure':([0,18,28,49,],[8,8,8,8,]),}
+_lr_goto_items = {'assignation':([0,16,17,31,49,],[7,28,7,7,7,]),'statement':([0,17,31,49,],[3,3,3,3,]),'programme':([0,17,31,49,],[9,30,41,50,]),'structure':([0,17,31,49,],[11,11,11,11,]),'expression':([0,1,4,6,12,17,20,21,22,23,24,25,27,31,40,42,46,49,],[8,14,18,19,26,8,33,34,35,36,37,38,39,8,43,45,47,8,]),}
 
 _lr_goto = {}
 for _k, _v in _lr_goto_items.items():
@@ -26,23 +26,23 @@ for _k, _v in _lr_goto_items.items():
 del _lr_goto_items
 _lr_productions = [
   ("S' -> programme","S'",1,None,None,None),
-  ('programme -> statement','programme',1,'p_programme_statement','parserProjet.py',9),
-  ('programme -> statement ; programme','programme',3,'p_programme_recursive','parserProjet.py',13),
-  ('statement -> expression DEL expression','statement',3,'p_statement_del','parserProjet.py',17),
-  ('statement -> expression REP expression ; expression','statement',5,'p_statement_rep','parserProjet.py',21),
-  ('statement -> assignation','statement',1,'p_statement','parserProjet.py',25),
-  ('statement -> structure','statement',1,'p_statement','parserProjet.py',26),
-  ('statement -> LINE expression','statement',2,'p_statement_line','parserProjet.py',30),
-  ('statement -> SIZE expression','statement',2,'p_statement_size','parserProjet.py',34),
-  ('expression -> expression ADD_OP expression','expression',3,'p_expression_op','parserProjet.py',38),
-  ('expression -> expression MUL_OP expression','expression',3,'p_expression_op','parserProjet.py',39),
-  ('expression -> NUMBER','expression',1,'p_expression_num_or_var','parserProjet.py',43),
-  ('expression -> IDENTIFIER','expression',1,'p_expression_num_or_var','parserProjet.py',44),
-  ('expression -> ( expression )','expression',3,'p_expression_paren','parserProjet.py',48),
-  ('expression -> expression < expression','expression',3,'p_expression_less','parserProjet.py',52),
-  ('expression -> expression > expression','expression',3,'p_expression_more','parserProjet.py',56),
-  ('expression -> CHAR','expression',1,'p_expression_char','parserProjet.py',60),
-  ('assignation -> IDENTIFIER = expression','assignation',3,'p_assign','parserProjet.py',64),
-  ('structure -> IF expression { programme }','structure',5,'p_structure_if','parserProjet.py',68),
-  ('structure -> FOR ( assignation ; expression ; expression ) { programme }','structure',11,'p_structure_for','parserProjet.py',72),
+  ('programme -> statement','programme',1,'p_programme_statement','parserProjet.py',10),
+  ('programme -> statement ; programme','programme',3,'p_programme_recursive','parserProjet.py',14),
+  ('statement -> expression DEL expression','statement',3,'p_statement_del','parserProjet.py',20),
+  ('statement -> expression REP expression ; expression','statement',5,'p_statement_rep','parserProjet.py',24),
+  ('statement -> assignation','statement',1,'p_statement','parserProjet.py',28),
+  ('statement -> structure','statement',1,'p_statement','parserProjet.py',29),
+  ('statement -> LINE expression','statement',2,'p_statement_line','parserProjet.py',33),
+  ('statement -> SIZE expression','statement',2,'p_statement_size','parserProjet.py',37),
+  ('expression -> expression ADD_OP expression','expression',3,'p_expression_op','parserProjet.py',44),
+  ('expression -> expression MUL_OP expression','expression',3,'p_expression_op','parserProjet.py',45),
+  ('expression -> NUMBER','expression',1,'p_expression_num_or_var','parserProjet.py',49),
+  ('expression -> IDENTIFIER','expression',1,'p_expression_num_or_var','parserProjet.py',50),
+  ('expression -> ( expression )','expression',3,'p_expression_paren','parserProjet.py',54),
+  ('expression -> expression < expression','expression',3,'p_expression_less','parserProjet.py',58),
+  ('expression -> expression > expression','expression',3,'p_expression_more','parserProjet.py',62),
+  ('expression -> CHAR','expression',1,'p_expression_char','parserProjet.py',66),
+  ('assignation -> IDENTIFIER = expression','assignation',3,'p_assign','parserProjet.py',72),
+  ('structure -> IF expression { programme }','structure',5,'p_structure_if','parserProjet.py',79),
+  ('structure -> FOR ( assignation ; expression ; expression ) { programme }','structure',11,'p_structure_for','parserProjet.py',83),
 ]
